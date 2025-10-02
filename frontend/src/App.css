@@ -1,0 +1,280 @@
+/* ==========================================================================
+   App.css - TAM VE DOĞRU VERSİYON
+   ========================================================================== */
+
+/* --- Genel Sayfa Stilleri --- */
+.App {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.main-title {
+  font-family: 'Avenir', sans-serif;
+  font-weight: 500;
+  font-size: 28px;
+  color: #333;
+  margin-bottom: 40px;
+}
+
+/* --- Ürün Kartı Stilleri --- */
+.product-card {
+  background-color: #fff;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  width: 100%; /* Kartın slide'ı doldurmasını sağla */
+  padding: 20px;
+  text-align: left;
+  transition: transform 0.2s, box-shadow 0.2s;
+  cursor: pointer;
+  box-sizing: border-box; /* Padding ve border'ın genişliği etkilememesi için */
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+}
+
+.product-image-container {
+  background-color: #f8f8f8;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  overflow: hidden;
+}
+
+.product-image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.product-name {
+  font-size: 16px;
+  font-weight: 500;
+  margin: 0 0 5px 0;
+  color: #333;
+}
+
+.product-price {
+  font-size: 15px;
+  font-weight: normal;
+  color: #555;
+  margin: 0 0 15px 0;
+}
+
+.product-rating {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  color: #888;
+}
+
+.product-rating .rating-text {
+  margin-left: 8px;
+}
+
+/* --- Renk Seçici Stilleri --- */
+.color-picker {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 15px;
+  margin-top: 10px;
+}
+
+.color-dot {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: border-color 0.2s;
+}
+
+.color-dot.active {
+  border-color: #555;
+}
+
+
+/* ==========================================================================
+   SWIPER CAROUSEL İÇİN KESİN ÇÖZÜM STİLLERİ
+   ========================================================================== */
+
+/* Swiper'ın ana konteyneri. Yeni bir katmanlama bağlamı oluşturuyoruz. */
+.product-container {
+  position: relative; /* Bu, içindeki z-index'lerin düzgün çalışması için KRİTİK! */
+  padding: 0 50px; /* Okların içeri girmemesi için sağdan ve soldan boşluk */
+}
+
+/* Swiper'ın kendisine alttan boşluk vererek scrollbar'a yer açıyoruz */
+.product-swiper {
+  padding-bottom: 40px !important;
+}
+
+/* Swiper Slide'larının yüksekliğinin içeriğe göre ayarlanmasını sağla */
+.swiper-slide {
+  height: auto;
+}
+
+/* --- OKLAR (NAVIGATION) --- */
+.swiper-button-next,
+.swiper-button-prev {
+  color: #333;
+  --swiper-navigation-size: 28px;
+  z-index: 20 !important; /* Diğer her şeyin ÜSTÜNE çıkar */
+}
+
+/* --- KAYDIRMA ÇUBUĞU (SCROLLBAR) --- */
+.swiper-scrollbar {
+  bottom: 10px !important; /* Konteynerin altından 10px yukarıda */
+  left: 10% !important; /* Soldan %10 boşluk */
+  width: 80% !important; /* Genişlik */
+  height: 5px !important;
+  background: #f0f0f0;
+  z-index: 20 !important; /* Diğer her şeyin ÜSTÜNE çıkar */
+}
+
+/* --- SÜRÜKLENEN KISIM --- */
+.swiper-scrollbar-drag {
+  background: #888;
+  cursor: grab; /* "Tutma" imleci */
+}
+
+.swiper-scrollbar-drag:active {
+  cursor: grabbing; /* "Sürüklerken" imleci */
+}
+
+.star-container i {
+  color: #E6CA97; /* Altın sarısı bir renk */
+  margin-right: 2px; /* Yıldızlar arası hafif boşluk */
+}
+
+/* frontend/src/App.css dosyasının sonuna eklenecek */
+
+/* --- Filtreleme Arayüzü Stilleri --- */
+.filter-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px; /* Elemanlar arası boşluk */
+  margin-bottom: 40px;
+  flex-wrap: wrap; /* Küçük ekranlarda alt satıra geç */
+}
+
+.filter-input {
+  padding: 10px 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-family: 'Avenir', sans-serif;
+  font-size: 15px;
+  width: 150px;
+}
+
+.filter-button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  background-color: #333;
+  color: white;
+  font-family: 'Avenir', sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.filter-button:hover {
+  background-color: #555;
+}
+
+.clear-button {
+  padding: 10px 20px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background-color: #fff;
+  color: #555;
+  font-family: 'Avenir', sans-serif;
+  font-size: 15px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.clear-button:hover {
+  background-color: #f8f8f8;
+}
+
+
+/* ==========================================================================
+   RESPONSIVE TASARIM - MOBİL CİHAZLAR İÇİN
+   ========================================================================== */
+
+/* Genellikle 768px, tablet ve altı için bir kırılma noktası olarak kabul edilir. */
+@media (max-width: 768px) {
+
+  /* Ana uygulama konteynerinin kenar boşluklarını azalt */
+  .App {
+    margin: 20px auto;
+    padding: 15px;
+  }
+
+  /* Ana başlığın boyutunu küçült */
+  .main-title {
+    font-size: 24px;
+    margin-bottom: 30px;
+  }
+
+  /* Filtreleme kutucuklarını ve butonlarını alt alta getir */
+  .filter-container {
+    flex-direction: column; /* Dikey olarak diz */
+    gap: 10px;
+    margin-bottom: 30px;
+  }
+
+  .filter-input {
+  width: auto; /* Genişliği içeriğine göre otomatik ayarla */
+  flex-grow: 1; /* Esnek bir şekilde büyüyebilsin */
+  max-width: 250px; /* Ama en fazla 250px genişliğinde olsun */
+}
+
+
+  /* Swiper oklarının mobil cihazlarda daha iyi görünmesini sağla */
+  .product-container {
+    padding: 0; /* Mobil'de kenar boşluklarını sıfırla, oklar tam kenarda dursun */
+  }
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    /* Okların boyutunu küçült */
+    --swiper-navigation-size: 22px; 
+  }
+
+  /* Scrollbar'ı mobil için ayarla */
+  .swiper-scrollbar {
+    bottom: 5px !important;
+    height: 4px !important;
+  }
+
+  /* Ürün kartının iç boşluklarını azalt */
+  .product-card {
+    padding: 15px;
+  }
+
+  .product-name {
+    font-size: 15px;
+  }
+
+  .product-price {
+    font-size: 14px;
+  }
+}
+
+/* Daha küçük telefon ekranları için ek ayar (isteğe bağlı ama iyi olur) */
+@media (max-width: 480px) {
+  .main-title {
+    font-size: 22px;
+  }
+
+  .product-card {
+    /* Kart içindeki metinler çok sıkışırsa diye font boyutlarını biraz daha küçültebiliriz */
+  }
+}
