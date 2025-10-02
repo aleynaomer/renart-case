@@ -27,7 +27,7 @@ function App() {
   // API'den veri çeken fonksiyonu ayrı bir fonksiyona taşıyalım
   const fetchProducts = (filterUrl = '') => {
     setLoading(true); // Her yeni istekte yükleniyor durumuna geç
-    fetch(`https://renart-case-backend-0ib5.onrender.com/api/products${filterUrl}` )
+    fetch(`https://renart-case-ben.onrender.com/api/products${filterUrl}` )
       .then(response => {
         if (!response.ok) throw new Error('Veri alınamadı.');
         return response.json();
