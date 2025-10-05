@@ -1,5 +1,4 @@
-// frontend/src/ProductCard.js
-import React, { useState } from 'react'; // useState'in import edildiğinden emin ol
+import React, { useState } from 'react'; 
 import StarRating from './StarRating';
 
 const ProductCard = ({ product }) => {
@@ -20,7 +19,6 @@ const ProductCard = ({ product }) => {
       <h3 className="product-name">{product.name}</h3>
       <p className="product-price">${product.price} USD</p>
       
-      {/* --- BU BÖLÜM EKSİK OLABİLİR --- */}
       <div className="color-picker">
         {availableColors.map(color => (
           <div
@@ -33,7 +31,6 @@ const ProductCard = ({ product }) => {
           />
         ))}
       </div>
-      {/* --- BİTİŞ --- */}
 
       <div className="product-rating">
         <StarRating rating={ratingValue} />

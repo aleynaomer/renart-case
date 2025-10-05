@@ -1,8 +1,4 @@
-/* ==========================================================================
-   App.css - TAM VE DOĞRU VERSİYON
-   ========================================================================== */
 
-/* --- Genel Sayfa Stilleri --- */
 .App {
   max-width: 1200px;
   margin: 40px auto;
@@ -18,18 +14,16 @@
   margin-bottom: 40px;
 }
 
-/* --- Ürün Kartı Stilleri --- */
 .product-card {
   background-color: #fff;
   border: 1px solid #eee;
   border-radius: 8px;
-  width: 100%; /* Kartın slide'ı doldurmasını sağla */
+  width: 100%; 
   padding: 20px;
   text-align: left;
   transition: transform 0.2s, box-shadow 0.2s;
   cursor: pointer;
-  box-sizing: border-box; /* Padding ve border'ın genişliği etkilememesi için */
-}
+  box-sizing: border-box; 
 
 .product-card:hover {
   transform: translateY(-5px);
@@ -74,7 +68,6 @@
   margin-left: 8px;
 }
 
-/* --- Renk Seçici Stilleri --- */
 .color-picker {
   display: flex;
   gap: 8px;
@@ -96,69 +89,57 @@
 }
 
 
-/* ==========================================================================
-   SWIPER CAROUSEL İÇİN KESİN ÇÖZÜM STİLLERİ
-   ========================================================================== */
 
-/* Swiper'ın ana konteyneri. Yeni bir katmanlama bağlamı oluşturuyoruz. */
 .product-container {
-  position: relative; /* Bu, içindeki z-index'lerin düzgün çalışması için KRİTİK! */
-  padding: 0 50px; /* Okların içeri girmemesi için sağdan ve soldan boşluk */
-}
+  position: relative; 
+  padding: 0 50px; 
 
-/* Swiper'ın kendisine alttan boşluk vererek scrollbar'a yer açıyoruz */
 .product-swiper {
   padding-bottom: 40px !important;
 }
 
-/* Swiper Slide'larının yüksekliğinin içeriğe göre ayarlanmasını sağla */
 .swiper-slide {
   height: auto;
 }
 
-/* --- OKLAR (NAVIGATION) --- */
 .swiper-button-next,
 .swiper-button-prev {
   color: #333;
   --swiper-navigation-size: 28px;
-  z-index: 20 !important; /* Diğer her şeyin ÜSTÜNE çıkar */
+  z-index: 20 !important; 
 }
 
-/* --- KAYDIRMA ÇUBUĞU (SCROLLBAR) --- */
 .swiper-scrollbar {
-  bottom: 10px !important; /* Konteynerin altından 10px yukarıda */
-  left: 10% !important; /* Soldan %10 boşluk */
-  width: 80% !important; /* Genişlik */
+  bottom: 10px !important; 
+  left: 10% !important; 
+  width: 80% !important; 
   height: 5px !important;
   background: #f0f0f0;
-  z-index: 20 !important; /* Diğer her şeyin ÜSTÜNE çıkar */
+  z-index: 20 !important; 
 }
 
-/* --- SÜRÜKLENEN KISIM --- */
 .swiper-scrollbar-drag {
   background: #888;
-  cursor: grab; /* "Tutma" imleci */
+  cursor: grab; 
 }
 
 .swiper-scrollbar-drag:active {
-  cursor: grabbing; /* "Sürüklerken" imleci */
+  cursor: grabbing; 
 }
 
 .star-container i {
-  color: #E6CA97; /* Altın sarısı bir renk */
-  margin-right: 2px; /* Yıldızlar arası hafif boşluk */
+  color: #E6CA97; 
+  margin-right: 2px; 
 }
 
-/* frontend/src/App.css dosyasının sonuna eklenecek */
 
-/* --- Filtreleme Arayüzü Stilleri --- */
 .filter-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 15px; /* Elemanlar arası boşluk */
+  gap: 15px; 
   margin-bottom: 40px;
-  flex-wrap: wrap; /* Küçük ekranlarda alt satıra geç */
+  flex-wrap: wrap; 
 }
 
 .filter-input {
@@ -204,57 +185,46 @@
 }
 
 
-/* ==========================================================================
-   RESPONSIVE TASARIM - MOBİL CİHAZLAR İÇİN
-   ========================================================================== */
 
-/* Genellikle 768px, tablet ve altı için bir kırılma noktası olarak kabul edilir. */
 @media (max-width: 768px) {
 
-  /* Ana uygulama konteynerinin kenar boşluklarını azalt */
   .App {
     margin: 20px auto;
     padding: 15px;
   }
 
-  /* Ana başlığın boyutunu küçült */
   .main-title {
     font-size: 24px;
     margin-bottom: 30px;
   }
 
-  /* Filtreleme kutucuklarını ve butonlarını alt alta getir */
   .filter-container {
-    flex-direction: column; /* Dikey olarak diz */
+    flex-direction: column; 
     gap: 10px;
     margin-bottom: 30px;
   }
 
   .filter-input {
-  width: auto; /* Genişliği içeriğine göre otomatik ayarla */
-  flex-grow: 1; /* Esnek bir şekilde büyüyebilsin */
-  max-width: 250px; /* Ama en fazla 250px genişliğinde olsun */
+  width: auto; 
+  flex-grow: 1; 
+  max-width: 250px;
 }
 
 
-  /* Swiper oklarının mobil cihazlarda daha iyi görünmesini sağla */
   .product-container {
-    padding: 0; /* Mobil'de kenar boşluklarını sıfırla, oklar tam kenarda dursun */
+    padding: 0; 
   }
 
   .swiper-button-next,
   .swiper-button-prev {
-    /* Okların boyutunu küçült */
     --swiper-navigation-size: 22px; 
   }
 
-  /* Scrollbar'ı mobil için ayarla */
   .swiper-scrollbar {
     bottom: 5px !important;
     height: 4px !important;
   }
 
-  /* Ürün kartının iç boşluklarını azalt */
   .product-card {
     padding: 15px;
   }
@@ -268,13 +238,11 @@
   }
 }
 
-/* Daha küçük telefon ekranları için ek ayar (isteğe bağlı ama iyi olur) */
 @media (max-width: 480px) {
   .main-title {
     font-size: 22px;
   }
 
   .product-card {
-    /* Kart içindeki metinler çok sıkışırsa diye font boyutlarını biraz daha küçültebiliriz */
   }
 }

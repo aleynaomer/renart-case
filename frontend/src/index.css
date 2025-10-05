@@ -1,79 +1,63 @@
-/* frontend/src/index.css */
 
-/* --- AVENIR FONT AİLESİNİ TANIMLAMA --- */
-
-/* Avenir Normal (Roman) */
 @font-face {
-  font-family: 'Avenir'; /* Hepsine aynı aile ismini veriyoruz */
+  font-family: 'Avenir';
   src: url('./avenir/Avenir-Roman.ttf') format('truetype');
-  font-weight: 400; /* Normal kalınlık */
+  font-weight: 400;
   font-style: normal;
 }
 
-/* Avenir Medium */
 @font-face {
   font-family: 'Avenir';
   src: url('./avenir/Avenir-Medium.ttf') format('truetype');
-  font-weight: 500; /* Medium kalınlık */
+  font-weight: 500; 
   font-style: normal;
 }
 
-/* Avenir Heavy */
 @font-face {
   font-family: 'Avenir';
   src: url('./avenir/Avenir-Heavy.ttf') format('truetype');
-  font-weight: 800; /* Kalın (Heavy) */
+  font-weight: 800; 
   font-style: normal;
 }
 
-/* Avenir Black (En Kalın) */
 @font-face {
   font-family: 'Avenir';
   src: url('./avenir/Avenir-Black.ttf') format('truetype');
-  font-weight: 900; /* En kalın (Black) */
+  font-weight: 900; 
   font-style: normal;
 }
 
 
-/* --- MONTSERRAT FONT AİLESİNİ TANIMLAMA (İhtiyaç olursa diye) --- */
 
-/* Montserrat Regular */
 @font-face {
   font-family: 'Montserrat';
   src: url('./montserat/Montserrat-Regular.ttf') format('truetype');
-  font-weight: 400; /* Normal */
+  font-weight: 400; 
   font-style: normal;
 }
 
-/* Montserrat Medium */
 @font-face {
   font-family: 'Montserrat';
   src: url('./montserat/Montserrat-Medium.otf') format('truetype');
-  font-weight: 500; /* Medium */
+  font-weight: 500; 
   font-style: normal;
 }
 
-/* Montserrat Bold */
 @font-face {
   font-family: 'Montserrat';
   src: url('./montserat/Montserrat-Bold.ttf') format('truetype');
-  font-weight: 700; /* Bold */
+  font-weight: 700; 
   font-style: normal;
 }
 
 
-/* --- TEMEL SAYFA STİLLERİ --- */
 
 body {
   margin: 0;
-  /* 
-    Tasarımda büyük ihtimalle Avenir kullanıldığı için onu ilk sıraya yazıyoruz.
-    Eğer tarayıcı Avenir'i bulamazsa, listedeki bir sonraki fontu dener.
-  */
   font-family: 'Avenir', 'Montserrat', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #f8f8f8; /* Tasarıma benzer bir arka plan rengi */
+  background-color: #f8f8f8; 
 }
 
 code {
